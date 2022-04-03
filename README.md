@@ -40,3 +40,8 @@ Start the server
   npm run start
 ```
 
+
+## Demo
+
+Demo is available [here](https://markiewiczjakub.github.io/chess-coordinate-trainer/)
+
