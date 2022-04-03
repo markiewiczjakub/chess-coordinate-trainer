@@ -1,0 +1,12 @@
+.Tile {
+    flex: 1;
+    cursor: pointer;
+
+    &--dark {
+        background: #2b2b2b;
+    }
+
+    &--light {
+        background: #eee;
+    }
+}

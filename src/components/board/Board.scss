@@ -1,0 +1,11 @@
+.Board {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    aspect-ratio: 1;
+
+    .row {
+        display: flex;
+        flex: 1;
+    }
+}

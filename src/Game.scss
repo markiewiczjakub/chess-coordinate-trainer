@@ -1,0 +1,109 @@
+.Game {
+	width: 100vh;
+	height: 80vh;
+	max-height: 90vw;
+	display: flex;
+
+	$sidebar-background: #eee;
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 10vw;
+		height: 80vh;
+		flex: 1;
+		margin-left: 10px;
+
+		&__button {
+			margin-top: 10px;
+			width: 100%;
+			padding: 1em 0;
+			background: #eee;
+			border: 1px solid rgb(63, 63, 63);
+			font-size: 1.5em;
+			cursor: pointer;
+		}
+
+		.score {
+			width: 100%;
+			background: $sidebar-background;
+			color: black;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 4em;
+
+			&__title {
+				font-size: 0.8em;
+			}
+
+			&__value {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+		}
+
+		.action {
+			background: $sidebar-background;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+
+			&__timer {
+				text-align: center;
+				font-size: 1.1em;
+				margin-top: 5px;
+			}
+			
+			&__current {
+				text-align: center;
+				font-size: 2em;
+				margin: 10px 0;
+			}
+		}
+
+		.history {
+			width: 100%;
+			margin: 0;
+			margin-top: 10px;
+			padding: 0;
+			list-style: none;
+			flex: 1;
+			background: $sidebar-background;
+			overflow-y: auto;
+			display: flex;
+			flex-direction: column;
+
+			&__title {
+				margin: 0;
+				font-size: 1.1em;
+				padding-left: 5px;
+				margin-bottom: 5px;
+			}
+
+			&__item {
+				padding: 0.3em 0.7em;
+				position: relative;
+
+				&--good::after, &--bad::after {
+					position: absolute;
+					right: 10px;
+					font-weight: bold;
+				}
+
+				&--good::after {
+					content: "\2713";
+					color: green;
+				}
+
+				&--bad::after {
+					content: "\00d7";
+					color: red;
+				}
+			}
+		}
+	}
+}
